@@ -19,6 +19,11 @@ Technologies Used:
 - HTML5
 - CSS
 
+Assets:
+- Paw Print favicon used from Isabella Baillie on Giphy - 
+    https://giphy.com/stickers/paw-pawprint-print-fXWP44L91ioNZQSh2G
+
+
 
 Next Steps:
 "Play Ball" extension to allow the player to play ball with Ace once the ball is found. 

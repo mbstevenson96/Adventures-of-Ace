@@ -1,3 +1,32 @@
+//------------------ Variables ------------------------//
+
+
+
+//------------------ Cached Element References ----------//
+
+
+
+
+
+
+//------------------ Event Listeners ------------------//
+
+
+
+
+//------------------ Functions ---------------------//
+
+
+
+
+
+
+
+
+
+
+
+
 // Choose Your Own Adventure was selected as the game option.
 
 // The Adventures of Ace 
