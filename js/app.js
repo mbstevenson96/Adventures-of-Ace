@@ -1,28 +1,75 @@
 //------------------ Variables ------------------------//
-
+let winner
+let timerIntervalId
+let winTime, min, sec, seconds = 0
 
 
 //------------------ Cached Element References ----------//
+let helpAceBtn = document.getElementById('help-ace')
+let rejectAceBtn = document.getElementById('reject-ace')
+let sceneStories = document.getElementById('story')
 
-
-
-
-
+// console.log(helpAceBtn, 'hello');
+// console.log(rejectAceBtn, 'hello');
+// console.log(sceneStories, 'hello');
 
 //------------------ Event Listeners ------------------//
 
 
 
 
-//------------------ Functions ---------------------//
+//------------------ Game Functions ---------------------//
+
+init ()
+
+function init() {
+
+}
+
+function render() {
+
+}
+
+function sadAce() {
+
+}
+
+function betweenSceneAnimation() {
+
+}
+
+function scene1() {
+
+}
+
+function scene2() {
+  
+}
+
+function scene3() {
+  
+}
+
+function winningScene() {
+
+}
 
 
+//------------------ Hidden Timer Functions -----------//
+function startTimer() {
+}
 
+function handleClickWin() {
+}
 
+function tick() {
+}
 
+function renderMessage() {
+}
 
-
-
+function renderTime() {
+}
 
 
 
