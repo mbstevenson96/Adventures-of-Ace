@@ -16,7 +16,7 @@ const storyMessages = [
 let helpAceBtn = document.getElementById('help-ace')
 let sadAceBtn = document.getElementById('sad-ace')
 let sceneStories = document.getElementById('story')
-let pictursOfAce = document.getElementById('image-ace')
+let picturesOfAce = document.getElementById('image-ace')
 let title = document.getElementById('title')
 
 // console.log(helpAceBtn, 'hello');
@@ -25,9 +25,6 @@ let title = document.getElementById('title')
 
 //------------------ Event Listeners ------------------//
 helpAceBtn.addEventListener('click', scene1)
-// helpAceBtn.addEventListener('click', scene2)
-// helpAceBtn.addEventListener('click', scene3)
-// helpAceBtn.addEventListener('click', winningScene)
 sadAceBtn.addEventListener('click', sadAcePicture)
 
 // console.log(helpAceBtn);
@@ -48,18 +45,17 @@ function init() {
 function sadAcePicture() {
   // this will be the losing aspect of the game. 
   // whenever the losing button is picked the player will be sent here
+  
+  picturesOfAce.src = '../assets/sadAce.jpg'
+  
+
   sceneStories.textContent = "Ace is sad you will not help him."
+
+
   helpAceBtn.style = 'display: none'
   sadAceBtn.style = 'display: none'
   title.style = 'display: none'
 }
-
-
-// function betweenSceneAnimation() {
-//   // this will show the paws walking to a sound and will be shown between scenes.
-//   // will link to this function betweens scenes and set a time in this function to play for set amount of time. 
-// }
-
 
 function scene1() {
   // console.log('click');
@@ -69,6 +65,9 @@ function scene1() {
   helpAceBtn.textContent = 'Go Outside and Look!'
 
   sadAceBtn.textContent = 'Give Up.'
+
+  title.style = 'display: none'
+
 }
 
 // function scene2() {
@@ -96,6 +95,8 @@ function scene1() {
 //   helpAceBtn.style = 'display: none'
 
 //   sadAceBtn.style = 'display: none'
+
+//   // build in dancing dog animation with sound
 // }
 
 
