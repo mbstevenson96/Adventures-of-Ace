@@ -16,6 +16,8 @@ const storyMessages = [
 let helpAceBtn = document.getElementById('help-ace')
 let sadAceBtn = document.getElementById('sad-ace')
 let sceneStories = document.getElementById('story')
+let pictursOfAce = document.getElementById('image-ace')
+let title = document.getElementById('title')
 
 // console.log(helpAceBtn, 'hello');
 // console.log(rejectAceBtn, 'hello');
@@ -38,12 +40,18 @@ function init() {
   helpAceBtn.textContent = 'Help Ace Find Ball'
   sadAceBtn.textContent = 'Too Bad So Sad Ace Boy'
 }
-console.log(init, 'hello');
+// console.log(init, 'hello');
 
 function sadAcePicture() {
   // this will be the losing aspect of the game. 
   // whenever the losing button is picked the player will be sent here
+  sceneStories.textContent = "Ace is sad you will not help him."
+  helpAceBtn.style = 'display: none'
+  sadAceBtn.style = 'display: none'
+  title.style = 'display: none'
 }
+
+
 // function betweenSceneAnimation() {
 //   // this will show the paws walking to a sound and will be shown between scenes.
 //   // will link to this function betweens scenes and set a time in this function to play for set amount of time. 
@@ -53,7 +61,7 @@ function sadAcePicture() {
 function scene1() {
   // console.log('click');
   sceneStories = storyMessages[0]
-    // console.log(sceneStories);
+    console.log(sceneStories);
 
   helpAceBtn.textContent = 'Go Outside and Look'
 
