@@ -1,12 +1,20 @@
+//------------------ Constants ------------------------//
+const storyMessages = [
+  "Great! The first place Ace would like to investigate is his favorite chair. He spends long hours playing with his toys in this chair so there are high hopes his ball will be there. It looks like there is sad news to give as his ball is not here. What are the next steps?",
+  "Wonderful! Ace is excited to have a helper find his ball. Watch his excitment show while he waits to be let outside.",
+  "Ace wants to search the yard but since the yard is big he calls in help from his BFF Sophie. They search and search but have no luck on finding the ball. Should Ace continue to search?",
+  "YAY!!! You helped Ace find his ball and he is so happy!"
+];
+
 //------------------ Variables ------------------------//
-let winner
-let timerIntervalId
-let winTime, min, sec, seconds = 0
+// let winner
+// let timerIntervalId
+// let winTime, min, sec, seconds = 0
 
 
 //------------------ Cached Element References ----------//
 let helpAceBtn = document.getElementById('help-ace')
-let rejectAceBtn = document.getElementById('reject-ace')
+let sadAceBtn = document.getElementById('sad-ace')
 let sceneStories = document.getElementById('story')
 
 // console.log(helpAceBtn, 'hello');
@@ -14,8 +22,11 @@ let sceneStories = document.getElementById('story')
 // console.log(sceneStories, 'hello');
 
 //------------------ Event Listeners ------------------//
+helpAceBtn.addEventListener('click', scene1)
+sadAceBtn.addEventListener('click', sadAcePicture)
 
-
+// console.log(helpAceBtn);
+// console.log(sadAceBtn);
 
 
 //------------------ Game Functions ---------------------//
@@ -23,53 +34,60 @@ let sceneStories = document.getElementById('story')
 init ()
 
 function init() {
-
+  sceneStories.textContent = "Welcome to the Adventures of Ace! Ace is a Bulldog American Staffordshire Terrier mix who loves to play ball. An issue has arose, though, where he has lost his ball and is sad. He is looking for someone to assist him in searching and wants to know if that will be you? Work through this story game to find out what happened to Ace's ball and be his hero. Whatch out for sad Ace, though, because one wrong move can cause great disappointment!"
+  helpAceBtn.textContent = 'Help Ace Find Ball'
+  sadAceBtn.textContent = 'Too Bad So Sad Ace Boy'
 }
+console.log(init, 'hello');
 
-function render() {
-
+function sadAcePicture() {
+  // this will be the losing aspect of the game. 
+  // whenever the losing button is picked the player will be sent here
 }
+// function betweenSceneAnimation() {
+//   // this will show the paws walking to a sound and will be shown between scenes.
+//   // will link to this function betweens scenes and set a time in this function to play for set amount of time. 
+// }
 
-function sadAce() {
-
-}
-
-function betweenSceneAnimation() {
-
-}
 
 function scene1() {
+  // console.log('click');
+  sceneStories = storyMessages[0]
+    // console.log(sceneStories);
 
+  helpAceBtn.textContent = 'Go Outside and Look'
+
+  sadAceBtn.textContent = 'Give Up'
 }
 
-function scene2() {
+// function scene2() {
   
-}
+// }
 
-function scene3() {
+// function scene3() {
   
-}
+// }
 
-function winningScene() {
+// function winningScene() {
 
-}
+// }
 
 
 //------------------ Hidden Timer Functions -----------//
-function startTimer() {
-}
+// function startTimer() {
+// }
 
-function handleClickWin() {
-}
+// function handleClickWin() {
+// }
 
-function tick() {
-}
+// function tick() {
+// }
 
-function renderMessage() {
-}
+// function renderMessage() {
+// }
 
-function renderTime() {
-}
+// function renderTime() {
+// }
 
 
 
