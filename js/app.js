@@ -25,6 +25,9 @@ let title = document.getElementById('title')
 
 //------------------ Event Listeners ------------------//
 helpAceBtn.addEventListener('click', scene1)
+// helpAceBtn.addEventListener('click', scene2)
+// helpAceBtn.addEventListener('click', scene3)
+// helpAceBtn.addEventListener('click', winningScene)
 sadAceBtn.addEventListener('click', sadAcePicture)
 
 // console.log(helpAceBtn);
@@ -60,24 +63,39 @@ function sadAcePicture() {
 
 function scene1() {
   // console.log('click');
-  sceneStories = storyMessages[0]
-    console.log(sceneStories);
+  sceneStories.textContent = storyMessages[0]
+    // console.log(sceneStories);
 
-  helpAceBtn.textContent = 'Go Outside and Look'
+  helpAceBtn.textContent = 'Go Outside and Look!'
 
-  sadAceBtn.textContent = 'Give Up'
+  sadAceBtn.textContent = 'Give Up.'
 }
 
 // function scene2() {
-  
+//   sceneStories.textContent = storyMessages[1]
+//     // console.log(sceneStories);
+
+//   helpAceBtn.textContent = 'Open Door!'
+
+//   sadAceBtn.style = 'display: none'
 // }
 
 // function scene3() {
-  
+//   sceneStories.textContent = storyMessages[2]
+//     // console.log(sceneStories);
+
+//   helpAceBtn.textContent = 'Lets check the area around the rain barrel!'
+
+//   sadAceBtn.textContent = 'So sad, looks like your ball is lost. '
 // }
 
 // function winningScene() {
+//   sceneStories.textContent = storyMessages[3]
+//   // console.log(sceneStories);
 
+//   helpAceBtn.style = 'display: none'
+
+//   sadAceBtn.style = 'display: none'
 // }
 
 
