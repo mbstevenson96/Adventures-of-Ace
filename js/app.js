@@ -68,36 +68,46 @@ function scene1() {
 
   title.style = 'display: none'
 
+  helpAceBtn.addEventListener('click', scene2)
 }
 
-// function scene2() {
-//   sceneStories.textContent = storyMessages[1]
-//     // console.log(sceneStories);
+function scene2() {
+  sceneStories.textContent = storyMessages[1]
+    // console.log(sceneStories);
 
-//   helpAceBtn.textContent = 'Open Door!'
+  helpAceBtn.textContent = 'Open Door!'
 
-//   sadAceBtn.style = 'display: none'
-// }
+  sadAceBtn.style = 'display: none'
 
-// function scene3() {
-//   sceneStories.textContent = storyMessages[2]
-//     // console.log(sceneStories);
+  helpAceBtn.addEventListener('click', scene3)
 
-//   helpAceBtn.textContent = 'Lets check the area around the rain barrel!'
+}
 
-//   sadAceBtn.textContent = 'So sad, looks like your ball is lost. '
-// }
+function scene3() {
+  sceneStories.textContent = storyMessages[2]
+    // console.log(sceneStories);
 
-// function winningScene() {
-//   sceneStories.textContent = storyMessages[3]
-//   // console.log(sceneStories);
+  helpAceBtn.textContent = 'Lets check the area around the rain barrel!'
 
-//   helpAceBtn.style = 'display: none'
+  sadAceBtn.style = "display: default"
+  sadAceBtn.textContent = 'So sad, looks like your ball is lost.'
 
-//   sadAceBtn.style = 'display: none'
+  helpAceBtn.addEventListener('click', winningScene)
 
-//   // build in dancing dog animation with sound
-// }
+}
+
+function winningScene() {
+  picturesOfAce.src = '../assets/ballAce.jpg'
+
+  sceneStories.textContent = storyMessages[3]
+  // console.log(sceneStories);
+
+  helpAceBtn.style = 'display: none'
+
+  sadAceBtn.style = 'display: none'
+
+  // build in dancing dog animation with sound
+}
 
 
 //------------------ Hidden Timer Functions -----------//
