@@ -7,6 +7,10 @@ const storyMessages = [
   "Welcome to the Adventures of Ace! Ace is a Bulldog American Staffordshire Terrier mix who loves to play ball. An issue has arose, though, where he has lost his ball and is sad. He is looking for someone to assist him in searching and wants to know if that will be you? Work through this story game to find out what happened to Ace's ball and be his hero. Whatch out for sad Ace, though, because one wrong move can cause great disappointment!"
 ];
 
+// const randoAcePictures = [
+  
+// ]
+
 //------------------ Variables ------------------------//
 
 
@@ -48,9 +52,10 @@ function sadAcePicture() {
   picturesOfAce.src = '../assets/sadAce.jpg'
   
 
-  sceneStories.textContent = "Ace is sad you will not help him."
+  sceneStories.textContent = "Ace is sad you will not help him. All he wants to do is play ball with you."
 
   resetBtn.style = 'display: block'
+  resetBtn.textContent = "I'm sorry Ace, let me help you find your ball."
   resetBtn.addEventListener('click', resetGame)
 
   helpAceBtn.style = 'display: none'
