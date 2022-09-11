@@ -143,14 +143,14 @@ function startTimer() {
   timerIntervalId = setInterval(tick, 1000)
 }
 
-// function handleClickWin() {
-//   let message
-//   winTime = seconds
-//   if (min < 1) { message = `YAAAAY, you won in ${sec} seconds!` }
-//   else if (min < 2) {message = `YAAAAY, you won in ${min} minute and ${sec} seconds!`}
-//   else {message = `YAAAAY, you won in ${min} minutes and ${sec} seconds!`}
-//   renderMessage(message)
-// }
+function handleClickWin() {
+  let message
+  winTime = seconds
+  if (min < 1) { message = `YAAAAY, you won in ${sec} seconds!` }
+  else if (min < 2) {message = `YAAAAY, you won in ${min} minute and ${sec} seconds!`}
+  else {message = `YAAAAY, you won in ${min} minutes and ${sec} seconds!`}
+  renderMessage(message)
+}
 
 // function tick() {
 //   seconds++
