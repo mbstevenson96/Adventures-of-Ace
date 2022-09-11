@@ -61,6 +61,8 @@ function sadAcePicture() {
 
   sceneStories.textContent = "Ace is sad you will not help him."
 
+  resetBtn.style = 'display: block'
+  resetBtn.addEventListener('click', resetGame)
 
   helpAceBtn.style = 'display: none'
   sadAceBtn.style = 'display: none'
