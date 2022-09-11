@@ -152,10 +152,10 @@ function handleClickWin() {
   renderMessage(message)
 }
 
-// function tick() {
-//   seconds++
-//   renderTime()
-// }
+function tick() {
+  seconds++
+  renderTime()
+}
 
 // function renderMessage(message) {
 //   winMsg.textContent = message
