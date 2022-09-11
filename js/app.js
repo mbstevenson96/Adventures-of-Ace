@@ -40,7 +40,7 @@ function init() {
 
   resetBtn.style = "display: none"
 }
-// console.log(init, 'hello');
+
 
 function sadAcePicture() {
   picturesOfAce.src = '../assets/sadAce.jpg'
@@ -57,9 +57,7 @@ function sadAcePicture() {
 }
 
 function scene1() {
-  // console.log('click');
   sceneStories.textContent = storyMessages[0]
-    // console.log(sceneStories);
   
   picturesOfAce.style = "display: none"
   videosOfAce.style = "display: block"
@@ -76,7 +74,6 @@ function scene1() {
 
 function scene2() {
   sceneStories.textContent = storyMessages[1]
-    // console.log(sceneStories);
 
   videosOfAce.src = "../assets/doorAce.mp4"
   videosOfAce.volume = .10
@@ -91,7 +88,6 @@ function scene2() {
 
 function scene3() {
   sceneStories.textContent = storyMessages[2]
-    // console.log(sceneStories);
   
   videosOfAce.src = "../assets/AceandSophieBackyard.mp4"
   videosOfAce.volume = .10
@@ -111,7 +107,6 @@ function winningScene() {
   picturesOfAce.src = '../assets/ballAce.jpg'
 
   sceneStories.textContent = storyMessages[3]
-  // console.log(sceneStories);
 
   helpAceBtn.style = 'display: none'
 
