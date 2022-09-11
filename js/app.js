@@ -161,12 +161,12 @@ function renderMessage(message) {
   winMsg.textContent = message
 }
 
-// function renderTime() {
-//   min = Math.floor(seconds / 60)
-//   sec = seconds % 60
-//   if (sec < 10) {
-//     timerEl.textContent = `${min}:0${sec}`
-//   } else {
-//     timerEl.textContent = `${min}:${sec}`
-//   }
-// }
+function renderTime() {
+  min = Math.floor(seconds / 60)
+  sec = seconds % 60
+  if (sec < 10) {
+    timerEl.textContent = `${min}:0${sec}`
+  } else {
+    timerEl.textContent = `${min}:${sec}`
+  }
+}
