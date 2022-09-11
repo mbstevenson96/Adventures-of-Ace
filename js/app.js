@@ -8,16 +8,21 @@ const storyMessages = [
 ];
 
 //------------------ Variables ------------------------//
-
+let timerIntervalId
+let winTime, min, sec, seconds = 0
 
 //------------------ Cached Element References ----------//
-let helpAceBtn = document.getElementById('help-ace')
-let sadAceBtn = document.getElementById('sad-ace')
-let sceneStories = document.getElementById('story')
-let picturesOfAce = document.getElementById('image-ace')
-let title = document.getElementById('title')
-let videosOfAce = document.getElementById('video')
-let resetBtn = document.getElementById('resetBtn')
+const helpAceBtn = document.getElementById('help-ace')
+const sadAceBtn = document.getElementById('sad-ace')
+const sceneStories = document.getElementById('story')
+const picturesOfAce = document.getElementById('image-ace')
+const title = document.getElementById('title')
+const videosOfAce = document.getElementById('video')
+const resetBtn = document.getElementById('resetBtn')
+
+const timerEl = document.getElementById('timer')
+// const winBtn = document.getElementById('win-button');
+const winMsg = document.getElementById('timermessage');
 
 //------------------ Event Listeners ------------------//
 helpAceBtn.addEventListener('click', scene1)
@@ -26,6 +31,7 @@ sadAceBtn.addEventListener('click', sadAcePicture)
 //------------------ Game Functions ---------------------//
 
 init ()
+startTimer()
 
 function init() {
   sceneStories.textContent = storyMessages[4]
@@ -39,6 +45,8 @@ function init() {
   sadAceBtn.textContent = 'Too Bad So Sad Ace Boy'
 
   resetBtn.style = "display: none"
+
+  helpAceBtn.addEventListener('click', startTimer)
 }
 
 
@@ -120,4 +128,45 @@ function winningScene() {
 
 function resetGame() {
   init ()
+  resetBtn.addEventListener('click', startTimer)
+
+
 }
+
+//------------------ Hidden Timer ------------------------//
+function startTimer() {
+  if(timerIntervalId) {
+    seconds = 0
+    clearInterval(timerIntervalId)
+    renderMessage('Press button to Win!')
+  }
+  timerIntervalId = setInterval(tick, 1000)
+}
+
+// function handleClickWin() {
+//   let message
+//   winTime = seconds
+//   if (min < 1) { message = `YAAAAY, you won in ${sec} seconds!` }
+//   else if (min < 2) {message = `YAAAAY, you won in ${min} minute and ${sec} seconds!`}
+//   else {message = `YAAAAY, you won in ${min} minutes and ${sec} seconds!`}
+//   renderMessage(message)
+// }
+
+// function tick() {
+//   seconds++
+//   renderTime()
+// }
+
+// function renderMessage(message) {
+//   winMsg.textContent = message
+// }
+
+// function renderTime() {
+//   min = Math.floor(seconds / 60)
+//   sec = seconds % 60
+//   if (sec < 10) {
+//     timerEl.textContent = `${min}:0${sec}`
+//   } else {
+//     timerEl.textContent = `${min}:${sec}`
+//   }
+// }
