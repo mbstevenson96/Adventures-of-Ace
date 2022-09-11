@@ -8,8 +8,6 @@ const storyMessages = [
 ];
 
 //------------------ Variables ------------------------//
-// let timerIntervalId
-// let winTime, min, sec, seconds = 0
 
 
 //------------------ Cached Element References ----------//
@@ -21,17 +19,9 @@ let title = document.getElementById('title')
 let videosOfAce = document.getElementById('video')
 let resetBtn = document.getElementById('resetBtn')
 
-// console.log(helpAceBtn, 'hello');
-// console.log(rejectAceBtn, 'hello');
-// console.log(sceneStories, 'hello');
-
 //------------------ Event Listeners ------------------//
 helpAceBtn.addEventListener('click', scene1)
 sadAceBtn.addEventListener('click', sadAcePicture)
-
-// console.log(helpAceBtn);
-// console.log(sadAceBtn);
-
 
 //------------------ Game Functions ---------------------//
 
@@ -53,9 +43,6 @@ function init() {
 // console.log(init, 'hello');
 
 function sadAcePicture() {
-  // this will be the losing aspect of the game. 
-  // whenever the losing button is picked the player will be sent here
-  
   picturesOfAce.src = '../assets/sadAce.jpg'
   
 
@@ -139,22 +126,3 @@ function winningScene() {
 function resetGame() {
   init ()
 }
-
-
-//------------------ Hidden Timer Functions -----------//
-// function startTimer() {
-// }
-
-// function handleClickWin() {
-// }
-
-// function tick() {
-// }
-
-// function renderMessage() {
-// }
-
-// function renderTime() {
-// }
-
-
