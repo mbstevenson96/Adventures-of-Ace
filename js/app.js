@@ -157,9 +157,9 @@ function tick() {
   renderTime()
 }
 
-// function renderMessage(message) {
-//   winMsg.textContent = message
-// }
+function renderMessage(message) {
+  winMsg.textContent = message
+}
 
 // function renderTime() {
 //   min = Math.floor(seconds / 60)
