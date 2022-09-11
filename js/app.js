@@ -3,7 +3,8 @@ const storyMessages = [
   "Great! The first place Ace would like to investigate is his favorite chair. He spends long hours playing with his toys in this chair so there are high hopes his ball will be there. It looks like there is sad news to give as his ball is not here. What are the next steps?",
   "Wonderful! Ace is excited to have a helper find his ball. Watch his excitment show while he waits to be let outside.",
   "Ace wants to search the yard but since the yard is big he calls in help from his BFF Sophie. They search and search but have no luck on finding the ball. Should Ace continue to search?",
-  "YAY!!! You helped Ace find his ball and he is so happy!"
+  "YAY!!! You helped Ace find his ball and he is so happy!",
+  "Welcome to the Adventures of Ace! Ace is a Bulldog American Staffordshire Terrier mix who loves to play ball. An issue has arose, though, where he has lost his ball and is sad. He is looking for someone to assist him in searching and wants to know if that will be you? Work through this story game to find out what happened to Ace's ball and be his hero. Whatch out for sad Ace, though, because one wrong move can cause great disappointment!"
 ];
 
 //------------------ Variables ------------------------//
@@ -18,6 +19,7 @@ let sceneStories = document.getElementById('story')
 let picturesOfAce = document.getElementById('image-ace')
 let title = document.getElementById('title')
 let videosOfAce = document.getElementById('video')
+let resetBtn = document.getElementById('resetBtn')
 
 // console.log(helpAceBtn, 'hello');
 // console.log(rejectAceBtn, 'hello');
@@ -36,9 +38,17 @@ sadAceBtn.addEventListener('click', sadAcePicture)
 init ()
 
 function init() {
-  sceneStories.textContent = "Welcome to the Adventures of Ace! Ace is a Bulldog American Staffordshire Terrier mix who loves to play ball. An issue has arose, though, where he has lost his ball and is sad. He is looking for someone to assist him in searching and wants to know if that will be you? Work through this story game to find out what happened to Ace's ball and be his hero. Whatch out for sad Ace, though, because one wrong move can cause great disappointment!"
+  sceneStories.textContent = storyMessages[4]
+
+  picturesOfAce.src = "../assets/windowAce.jpeg"
+
+  helpAceBtn.style = 'display: default'
   helpAceBtn.textContent = 'Help Ace Find Ball'
+
+  sadAceBtn.style = 'display: default'
   sadAceBtn.textContent = 'Too Bad So Sad Ace Boy'
+
+  resetBtn.style = "display: none"
 }
 // console.log(init, 'hello');
 
@@ -118,7 +128,14 @@ function winningScene() {
 
   sadAceBtn.style = 'display: none'
 
+  resetBtn.style = 'display: block'
+  resetBtn.addEventListener('click', resetGame)
+
   // build in dancing dog animation with sound
+}
+
+function resetGame() {
+  init ()
 }
 
 
