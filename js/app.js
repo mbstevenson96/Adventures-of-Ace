@@ -27,7 +27,7 @@ sadAceBtn.addEventListener('click', sadAcePicture)
 //------------------ Game Functions ---------------------//
 
 init ()
-startTimer()
+
 
 function init() {
   sceneStories.textContent = storyMessages[4]
@@ -41,8 +41,6 @@ function init() {
   sadAceBtn.textContent = 'Too Bad So Sad Ace Boy'
 
   resetBtn.style = "display: none"
-
-  helpAceBtn.addEventListener('click', startTimer)
 }
 
 
@@ -124,5 +122,4 @@ function winningScene() {
 
 function resetGame() {
   init ()
-  resetBtn.addEventListener('click', startTimer)
 }
