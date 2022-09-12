@@ -163,11 +163,24 @@ function winningScene() {
   
   picturesOfAce.addEventListener('mouseover', function() {
     aceSays.volume = .10
-    aceSays.play()
+    winningAudio()
   })
+
   resetBtn.style = 'display: block'
   resetBtn.addEventListener('click', resetGame)
 }
+
+function winningAudio() {
+  aceSays.currentTime=0;
+  aceSays.play();
+  // console.log(audio.currentTime);
+  setInterval(function(){
+    if(aceSays.currentTime>2){
+      aceSays.pause();
+        }
+      },1000);
+}
+
 
 function displayRandoPicsOfAce() {
   const randoAcePicBtn = document.createElement('button')
