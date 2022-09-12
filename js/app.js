@@ -55,7 +55,6 @@ const title = document.getElementById('title')
 const videosOfAce = document.getElementById('video')
 const resetBtn = document.getElementById('resetBtn')
 const resetBtnDiv = document.getElementById('resetBtnDiv')
-
 const aceSays = new Audio("../audio/winningSong.wav")
 
 
@@ -89,7 +88,6 @@ function init() {
 function sadAcePicture() {
   picturesOfAce.src = '../assets/sadAce.jpg'
   
-
   sceneStories.textContent = "Ace is sad you will not help him. All he wants to do is play ball with you."
 
   resetBtn.style = 'display: block'
@@ -128,7 +126,6 @@ function scene2() {
   sadAceBtn.style = 'display: none'
 
   helpAceBtn.addEventListener('click', scene3)
-
 }
 
 function scene3() {
@@ -170,10 +167,10 @@ function winningAudio() {
   aceSays.currentTime=0;
   aceSays.play();
   setInterval(function(){
-    if(aceSays.currentTime>2){
+    if(aceSays.currentTime>1){
       aceSays.pause();
-        }
-      },1000);
+    }
+  },1000);
 }
 
 function displayRandoPicsOfAce() {
