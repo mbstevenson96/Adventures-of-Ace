@@ -8,42 +8,42 @@ const storyMessages = [
 ];
 
 const randoAcePictures = [
-  '../AcePictures/Ace1/jpg',
-  '../AcePictures/Ace2/jpg',
-  '../AcePictures/Ace3/jpeg',
-  '../AcePictures/Ace4/jpeg',
-  '../AcePictures/Ace5/jpeg',
-  '../AcePictures/Ace6/jpg',
-  '../AcePictures/Ace7/jpeg',
-  '../AcePictures/Ace8/jpg',
-  '../AcePictures/Ace9/jpeg',
-  '../AcePictures/Ace10/jpeg',
-  '../AcePictures/Ace11/jpg',
-  '../AcePictures/Ace12/jpg',
-  '../AcePictures/Ace13/jpg',
-  '../AcePictures/Ace14/jpg',
-  '../AcePictures/Ace15/jpg',
-  '../AcePictures/Ace16/jpg',
-  '../AcePictures/Ace17/jpg',
-  '../AcePictures/Ace18/jpeg',
-  '../AcePictures/Ace19/jpg',
-  '../AcePictures/Ace20/jpeg',
-  '../AcePictures/Ace21/jpg',
-  '../AcePictures/Ace22/jpeg',
-  '../AcePictures/Ace23/jpeg',
-  '../AcePictures/Ace24/jpeg',
-  '../AcePictures/Ace25/jpg',
-  '../AcePictures/Ace26/jpg',
-  '../AcePictures/Ace27/jpg',
-  '../AcePictures/Ace28/jpg',
-  '../AcePictures/Ace29/jpg',
-  '../AcePictures/Ace30/jpg',
-  '../AcePictures/Ace31/jpg',
-  '../AcePictures/Ace32/jpg',
-  '../AcePictures/Ace33/jpg',
-  '../AcePictures/Ace34/jpg',
-  '../AcePictures/Ace35/jpeg',
-  '../AcePictures/Ace36/jpg',
+  '../AcePictures/Ace1.jpg',
+  '../AcePictures/Ace2.jpg',
+  '../AcePictures/Ace3.jpeg',
+  '../AcePictures/Ace4.jpeg',
+  '../AcePictures/Ace5.jpeg',
+  '../AcePictures/Ace6.jpg',
+  '../AcePictures/Ace7.jpeg',
+  '../AcePictures/Ace8.jpg',
+  '../AcePictures/Ace9.jpeg',
+  '../AcePictures/Ace10.jpeg',
+  '../AcePictures/Ace11.jpg',
+  '../AcePictures/Ace12.jpg',
+  '../AcePictures/Ace13.jpg',
+  '../AcePictures/Ace14.jpg',
+  '../AcePictures/Ace15.jpg',
+  '../AcePictures/Ace16.jpg',
+  '../AcePictures/Ace17.jpg',
+  '../AcePictures/Ace18.jpeg',
+  '../AcePictures/Ace19.jpg',
+  '../AcePictures/Ace20.jpeg',
+  '../AcePictures/Ace21.jpg',
+  '../AcePictures/Ace22.jpeg',
+  '../AcePictures/Ace23.jpeg',
+  '../AcePictures/Ace24.jpeg',
+  '../AcePictures/Ace25.jpg',
+  '../AcePictures/Ace26.jpg',
+  '../AcePictures/Ace27.jpg',
+  '../AcePictures/Ace28.jpg',
+  '../AcePictures/Ace29.jpg',
+  '../AcePictures/Ace30.jpg',
+  '../AcePictures/Ace31.jpg',
+  '../AcePictures/Ace32.jpg',
+  '../AcePictures/Ace33.jpg',
+  '../AcePictures/Ace34.jpg',
+  '../AcePictures/Ace35.jpeg',
+  '../AcePictures/Ace36.jpg',
 ]
 
 //------------------ Variables ------------------------//
@@ -174,14 +174,11 @@ function displayRandoPicsOfAce() {
   randoAcePicBtn.textContent = 'Random Ace Pictures!'
 
   document.getElementById('resetBtnDiv').appendChild(randoAcePicBtn)
-  // randoAcePicBtn.addEventListener('click', function() {
-  //   randoAcePicBtnLocation = document.createElement('img')
-  //   randoAcePicBtnLocation.src = randoAcePictures[Math.floor(Math.random() * randoAcePictures.length)]
-  //   document.getElementById('resetBtnDiv').appendChild(randoAcePicBtnLocation)
-  
-  
-  //   // return randoAcePictures[Math.floor(Math.random() * randoAcePictures.length)]
-  // })
+
+  randoAcePicBtn.addEventListener('click', function() {
+    let randoAcePic = randoAcePictures[Math.floor(Math.random() * randoAcePictures.length)]
+    picturesOfAce.setAttribute('src', randoAcePic)
+  })
 }
 
 function resetGame() {
