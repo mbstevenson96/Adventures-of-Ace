@@ -1,4 +1,8 @@
 body {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-family: 'Combo', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Shadows Into Light', cursive;
   margin: 0;
   background-color: #226F54;
   min-height: 100vh;
@@ -23,7 +27,10 @@ img {
 video {
   height: 500px;
   width: 95%;
-  /* display: flex;
+}
+
+section > p {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center; */
 }
