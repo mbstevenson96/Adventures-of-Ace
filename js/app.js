@@ -58,28 +58,34 @@ const title = document.getElementById('title')
 const videosOfAce = document.getElementById('video')
 const resetBtn = document.getElementById('resetBtn')
 
+const aceSays = new Audio("../audio/winningSong.wav")
+
 
 //------------------ Event Listeners ------------------//
 helpAceBtn.addEventListener('click', scene1)
 sadAceBtn.addEventListener('click', sadAcePicture)
 
+
 //------------------ Game Functions ---------------------//
 
 init ()
 
-
 function init() {
   sceneStories.textContent = storyMessages[4]
-
+  
   picturesOfAce.src = "../assets/windowAce.jpeg"
-
+  
   helpAceBtn.style = 'display: default'
   helpAceBtn.textContent = 'Help Ace Find Ball'
-
+  
   sadAceBtn.style = 'display: default'
   sadAceBtn.textContent = 'Too Bad So Sad Ace Boy'
-
+  
   resetBtn.style = "display: none"
+  picturesOfAce.addEventListener('mouseover', function() {
+    aceSays.volume = 0
+    aceSays.pause()
+  })
 }
 
 
@@ -153,13 +159,30 @@ function winningScene() {
   helpAceBtn.style = 'display: none'
 
   sadAceBtn.style = 'display: none'
-
+  
+  picturesOfAce.addEventListener('mouseover', function() {
+    aceSays.volume = .10
+    aceSays.play()
+  })
   resetBtn.style = 'display: block'
   resetBtn.addEventListener('click', resetGame)
-
   // build in dancing dog animation with sound
 }
 
+// function displayRandoPicsOfAce() {
+//   const randoAcePicBtn = document.createElement('button')
+//   randoAcePicBtn.textContent = 'Random Ace Pictures!'
+//   randoAcePicBtn.addEventListener('click' => {
+//     randoAcePicBtnLocation = document.createElement('img')
+//     randoAcePicBtnLocation.src = randoAcePictures
+  
+//     return randoAcePictures[Math.floor(Math.random() * randoAcePictures.length)]
+//   })
+//   document.body.appendChild('button')
+// }
+
 function resetGame() {
   init ()
+  aceSays.pause()
+  aceSays.currentTime = 0
 }
