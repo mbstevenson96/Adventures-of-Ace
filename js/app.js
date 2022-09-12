@@ -46,9 +46,6 @@ const randoAcePictures = [
   '../AcePictures/Ace36.jpg',
 ]
 
-//------------------ Variables ------------------------//
-
-
 //------------------ Cached Element References ----------//
 const helpAceBtn = document.getElementById('help-ace')
 const sadAceBtn = document.getElementById('sad-ace')
@@ -88,7 +85,6 @@ function init() {
     aceSays.pause()
   })
 }
-
 
 function sadAcePicture() {
   picturesOfAce.src = '../assets/sadAce.jpg'
@@ -173,14 +169,12 @@ function winningScene() {
 function winningAudio() {
   aceSays.currentTime=0;
   aceSays.play();
-  // console.log(audio.currentTime);
   setInterval(function(){
     if(aceSays.currentTime>2){
       aceSays.pause();
         }
       },1000);
 }
-
 
 function displayRandoPicsOfAce() {
   const randoAcePicBtn = document.createElement('button')
