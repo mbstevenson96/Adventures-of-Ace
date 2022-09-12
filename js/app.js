@@ -55,7 +55,7 @@ const title = document.getElementById('title')
 const videosOfAce = document.getElementById('video')
 const resetBtn = document.getElementById('resetBtn')
 const resetBtnDiv = document.getElementById('resetBtnDiv')
-const randoAcePicBtnDiv = document.getElementById('randoAcePicBtnDiv')
+const randoAcePicBtn = document.getElementById('randoAcePicBtn')
 
 const aceSays = new Audio("../audio/winningSong.wav")
 
@@ -82,7 +82,9 @@ function init() {
   sadAceBtn.textContent = 'Too Bad So Sad Ace Boy'
   
   resetBtn.style = "display: none"
-  randoAcePicBtnDiv.style = 'display: none'
+  randoAcePicBtn.style = 'display: none'
+
+  helpAceBtn.addEventListener('click', scene1)
 
   picturesOfAce.addEventListener('mouseover', function() {
     aceSays.volume = 0
@@ -179,9 +181,10 @@ function winningScene() {
     winningAudio()
   })
 
-  randoAcePicBtnDiv.style = 'display: block'
+  randoAcePicBtn.style = 'display: block'
 
   resetBtn.style = 'display: block'
+  resetBtn.textContent = 'Reset the Game'
   resetBtn.addEventListener('click', resetGame)
 }
 
@@ -196,10 +199,7 @@ function winningAudio() {
 }
 
 function displayRandoPicsOfAce() {
-  const randoAcePicBtn = document.createElement('button')
   randoAcePicBtn.textContent = 'Random Ace Pictures!'
-
-  document.getElementById('randoAcePicBtnDiv').appendChild(randoAcePicBtn)
 
   randoAcePicBtn.addEventListener('click', function() {
     let randoAcePic = randoAcePictures[Math.floor(Math.random() * randoAcePictures.length)]

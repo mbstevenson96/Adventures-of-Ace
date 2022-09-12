@@ -22,6 +22,7 @@ Technologies Used:
 Assets:
 - Paw Print favicon used from Isabella Baillie on Giphy - 
     https://giphy.com/stickers/paw-pawprint-print-fXWP44L91ioNZQSh2G
+- Add "Fad In" animation to text from Animate.css
 
 
 
