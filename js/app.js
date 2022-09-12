@@ -57,6 +57,7 @@ const picturesOfAce = document.getElementById('image-ace')
 const title = document.getElementById('title')
 const videosOfAce = document.getElementById('video')
 const resetBtn = document.getElementById('resetBtn')
+const resetBtnDiv = document.getElementById('resetBtnDiv')
 
 const aceSays = new Audio("../audio/winningSong.wav")
 
@@ -146,7 +147,7 @@ function scene3() {
   sadAceBtn.textContent = 'So sad, looks like your ball is lost.'
 
   helpAceBtn.addEventListener('click', winningScene)
-
+  helpAceBtn.addEventListener('click', displayRandoPicsOfAce)
 }
 
 function winningScene() {
@@ -166,20 +167,22 @@ function winningScene() {
   })
   resetBtn.style = 'display: block'
   resetBtn.addEventListener('click', resetGame)
-  // build in dancing dog animation with sound
 }
 
-// function displayRandoPicsOfAce() {
-//   const randoAcePicBtn = document.createElement('button')
-//   randoAcePicBtn.textContent = 'Random Ace Pictures!'
-//   randoAcePicBtn.addEventListener('click' => {
-//     randoAcePicBtnLocation = document.createElement('img')
-//     randoAcePicBtnLocation.src = randoAcePictures
+function displayRandoPicsOfAce() {
+  const randoAcePicBtn = document.createElement('button')
+  randoAcePicBtn.textContent = 'Random Ace Pictures!'
+
+  document.getElementById('resetBtnDiv').appendChild(randoAcePicBtn)
+  // randoAcePicBtn.addEventListener('click', function() {
+  //   randoAcePicBtnLocation = document.createElement('img')
+  //   randoAcePicBtnLocation.src = randoAcePictures[Math.floor(Math.random() * randoAcePictures.length)]
+  //   document.getElementById('resetBtnDiv').appendChild(randoAcePicBtnLocation)
   
-//     return randoAcePictures[Math.floor(Math.random() * randoAcePictures.length)]
-//   })
-//   document.body.appendChild('button')
-// }
+  
+  //   // return randoAcePictures[Math.floor(Math.random() * randoAcePictures.length)]
+  // })
+}
 
 function resetGame() {
   init ()
