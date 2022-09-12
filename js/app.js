@@ -91,6 +91,7 @@ function init() {
 }
 
 function sadAcePicture() {
+  picturesOfAce.style = 'display: default'
   picturesOfAce.src = '../assets/sadAce.jpg'
   
   sceneStories.textContent = "Ace is sad you will not help him. All he wants to do is play ball with you."
@@ -99,6 +100,7 @@ function sadAcePicture() {
   resetBtn.textContent = "I'm sorry Ace, let me help you find your ball."
   resetBtn.addEventListener('click', resetGame)
 
+  videosOfAce.style = 'display: none'
   helpAceBtn.style = 'display: none'
   sadAceBtn.style = 'display: none'
   title.style = 'display: none'
@@ -118,6 +120,7 @@ function scene1() {
   title.style = 'display: none'
 
   helpAceBtn.addEventListener('click', scene2)
+  sadAceBtn.addEventListener('click', sadAcePicture)
 }
 
 function scene2() {
@@ -131,6 +134,7 @@ function scene2() {
   sadAceBtn.style = 'display: none'
 
   helpAceBtn.addEventListener('click', scene3)
+  sadAceBtn.addEventListener('click', sadAcePicture)
 }
 
 function scene3() {
@@ -145,6 +149,7 @@ function scene3() {
   sadAceBtn.textContent = 'So sad, looks like your ball is lost.'
 
   helpAceBtn.addEventListener('click', winningScene)
+  sadAceBtn.addEventListener('click', sadAcePicture)
   helpAceBtn.addEventListener('click', displayRandoPicsOfAce)
 }
 
