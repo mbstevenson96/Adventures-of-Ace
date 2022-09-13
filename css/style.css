@@ -59,6 +59,11 @@ section > p {
   box-shadow: 2px 5px 9px #F4F0BB;
 }
 
+.buttons:hover {
+  box-shadow: 2px 5px 9px #DA2C38;
+  transform: translateY(-7px);
+}
+
 div {
   padding: 10px;
 }
