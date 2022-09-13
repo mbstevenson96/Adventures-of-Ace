@@ -47,5 +47,18 @@ section > p {
 }
 
 .buttons {
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+  font-family: 'Combo', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Shadows Into Light', cursive;
+  letter-spacing: 3px;
   font-size: 18px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 45px;
+  box-shadow: 2px 5px 9px #F4F0BB;
+}
+
+div {
+  padding: 10px;
 }
