@@ -85,6 +85,8 @@ function init() {
   randoAcePicBtn.style = 'display: none'
 
   helpAceBtn.removeEventListener('click', winningScene)
+  // picturesOfAce.removeEventListener('mouseover', winningScene)
+
   helpAceBtn.addEventListener('click', scene1)
   picturesOfAce.addEventListener('mouseover', function() {
     aceSays.volume = 0
@@ -119,7 +121,7 @@ function sadAcePicture() {
 function scene1() {
   sceneStories.textContent = storyMessages[0]
   sceneStories.classList.add('animate__animated', 'animate__fadeIn')
-  sceneStories.style.setProperty('animate__fadeIn', '0.5s')
+  sceneStories.style.setProperty('animate__fadeIn', '0.8s')
 
   picturesOfAce.style = "display: none"
   videosOfAce.src = '../assets/couchAce.mp4'
@@ -140,7 +142,7 @@ function scene1() {
 function scene2() {
   sceneStories.textContent = storyMessages[1]
   sceneStories.classList.add('animate__animated', 'animate__fadeIn')
-  sceneStories.style.setProperty('animate__fadeIn', '0.5s')
+  sceneStories.style.setProperty('animate__fadeIn', '0.8s')
 
   videosOfAce.src = "../assets/doorAce.mp4"
   videosOfAce.volume = .10
@@ -203,7 +205,7 @@ function winningAudio() {
   aceSays.currentTime=0;
   aceSays.play();
   setInterval(function(){
-    if(aceSays.currentTime>1){
+    if(aceSays.currentTime>5){
       aceSays.pause();
     }
   },1000);
