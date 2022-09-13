@@ -35,3 +35,9 @@ section > p {
   justify-content: center;
   align-items: center;
 }
+
+#title,
+section > p {
+  color: #F4F0BB;
+  letter-spacing: 3px;
+}
