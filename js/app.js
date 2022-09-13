@@ -90,7 +90,6 @@ function init() {
     aceSays.volume = 0
     aceSays.pause()
   })
-  console.log('init');
 }
 
 function sadAcePicture() {
@@ -115,7 +114,6 @@ function sadAcePicture() {
 
 
   resetBtn.addEventListener('click', init)
-  console.log('sadScePicture');
 }
 
 function scene1() {
@@ -129,16 +127,14 @@ function scene1() {
   videosOfAce.volume = .10
 
   helpAceBtn.textContent = 'Go Outside and Look!'
-
   sadAceBtn.textContent = 'Give Up.'
 
   title.style = 'display: none'
 
   helpAceBtn.removeEventListener('click', scene1)
+
   helpAceBtn.addEventListener('click', scene2)
   sadAceBtn.addEventListener('click', sadAcePicture)
-
-  console.log('scene1');
 }
 
 function scene2() {
@@ -150,15 +146,12 @@ function scene2() {
   videosOfAce.volume = .10
 
   helpAceBtn.textContent = 'Open Door!'
-
   sadAceBtn.style = 'display: none'
 
   helpAceBtn.removeEventListener('click', scene2)
 
   helpAceBtn.addEventListener('click', scene3)
   sadAceBtn.addEventListener('click', sadAcePicture)
-  console.log('scene2');
-
 }
 
 function scene3() {
@@ -179,8 +172,6 @@ function scene3() {
   helpAceBtn.addEventListener('click', winningScene)
   sadAceBtn.addEventListener('click', sadAcePicture)
   helpAceBtn.addEventListener('click', displayRandoPicsOfAce)
-  console.log('scene3');
-
 }
 
 function winningScene() {
@@ -193,23 +184,19 @@ function winningScene() {
   sceneStories.style.setProperty('animate__fadeIn', '0.5s')
 
   helpAceBtn.style = 'display: none'
-
   sadAceBtn.style = 'display: none'
+  resetBtn.style = 'display: block'
+  resetBtn.textContent = 'Reset the Game'
+  randoAcePicBtn.style = 'display: block'
   
   picturesOfAce.addEventListener('mouseover', function() {
     aceSays.volume = .10
     winningAudio()
   })
 
-  randoAcePicBtn.style = 'display: block'
-
   helpAceBtn.removeEventListener('click', winningScene)
 
-  resetBtn.style = 'display: block'
-  resetBtn.textContent = 'Reset the Game'
   resetBtn.addEventListener('click', init)
-  console.log('winningScene');
-
 }
 
 function winningAudio() {
