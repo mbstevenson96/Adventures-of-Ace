@@ -84,12 +84,13 @@ function init() {
   resetBtn.style = "display: none"
   randoAcePicBtn.style = 'display: none'
 
+  helpAceBtn.removeEventListener('click', winningScene)
   helpAceBtn.addEventListener('click', scene1)
-
   picturesOfAce.addEventListener('mouseover', function() {
     aceSays.volume = 0
     aceSays.pause()
   })
+  console.log('init');
 }
 
 function sadAcePicture() {
@@ -102,12 +103,19 @@ function sadAcePicture() {
 
   resetBtn.style = 'display: block'
   resetBtn.textContent = "I'm sorry Ace, let me help you find your ball."
-  resetBtn.addEventListener('click', resetGame)
-
+  
   videosOfAce.style = 'display: none'
   helpAceBtn.style = 'display: none'
   sadAceBtn.style = 'display: none'
   title.style = 'display: none'
+  
+  helpAceBtn.removeEventListener('click', scene1)
+  helpAceBtn.removeEventListener('click', scene2)
+  resetBtn.removeEventListener('click', init)
+
+
+  resetBtn.addEventListener('click', init)
+  console.log('sadScePicture');
 }
 
 function scene1() {
@@ -116,6 +124,7 @@ function scene1() {
   sceneStories.style.setProperty('animate__fadeIn', '0.5s')
 
   picturesOfAce.style = "display: none"
+  videosOfAce.src = '../assets/couchAce.mp4'
   videosOfAce.style = "display: block"
   videosOfAce.volume = .10
 
@@ -125,8 +134,11 @@ function scene1() {
 
   title.style = 'display: none'
 
+  helpAceBtn.removeEventListener('click', scene1)
   helpAceBtn.addEventListener('click', scene2)
   sadAceBtn.addEventListener('click', sadAcePicture)
+
+  console.log('scene1');
 }
 
 function scene2() {
@@ -141,8 +153,12 @@ function scene2() {
 
   sadAceBtn.style = 'display: none'
 
+  helpAceBtn.removeEventListener('click', scene2)
+
   helpAceBtn.addEventListener('click', scene3)
   sadAceBtn.addEventListener('click', sadAcePicture)
+  console.log('scene2');
+
 }
 
 function scene3() {
@@ -158,9 +174,13 @@ function scene3() {
   sadAceBtn.style = "display: default"
   sadAceBtn.textContent = 'So sad, looks like your ball is lost.'
 
+  helpAceBtn.removeEventListener('click', scene3)
+
   helpAceBtn.addEventListener('click', winningScene)
   sadAceBtn.addEventListener('click', sadAcePicture)
   helpAceBtn.addEventListener('click', displayRandoPicsOfAce)
+  console.log('scene3');
+
 }
 
 function winningScene() {
@@ -183,9 +203,13 @@ function winningScene() {
 
   randoAcePicBtn.style = 'display: block'
 
+  helpAceBtn.removeEventListener('click', winningScene)
+
   resetBtn.style = 'display: block'
   resetBtn.textContent = 'Reset the Game'
-  resetBtn.addEventListener('click', resetGame)
+  resetBtn.addEventListener('click', init)
+  console.log('winningScene');
+
 }
 
 function winningAudio() {
@@ -205,8 +229,4 @@ function displayRandoPicsOfAce() {
     let randoAcePic = randoAcePictures[Math.floor(Math.random() * randoAcePictures.length)]
     picturesOfAce.setAttribute('src', randoAcePic)
   })
-}
-
-function resetGame() {
-  init ()
 }
