@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adventure of Ace</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <script defer src="./js/app.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <link 
@@ -13,14 +14,14 @@
     href="./assets/pawprintfav.gif"
     type="image/png" 
     sizes="32x32"
->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Combo&family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-/>
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Combo&family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
   <main>
@@ -31,16 +32,16 @@
       <p id="story">Welcome to the Adventures of Ace! Ace is a Bulldog American Staffordshire Terrier mix who loves to play ball. An issue has arose, though, where he has lost his ball and is sad. He is looking for someone to assist him in searching and wants to know if that will be you? Work through this story game to find out what happened to Ace's ball and be his hero. Whatch out for sad Ace, though, because one wrong move can cause great disappointment!</p>
     </section>
     <div>
-      <button id="help-ace">Help Ace Find Ball</button>
+      <button class="buttons" id="help-ace" class="btn btn-outline-secondary">Help Ace Find Ball</button>
     </div>
     <div>
-      <button id="sad-ace">Too Bad So Sad Ace Boy</button>
+      <button class="buttons" id="sad-ace" class="btn btn-outline-secondary">Too Bad So Sad Ace Boy</button>
     </div>
     <div id="resetBtnDiv">
-      <button id="resetBtn" hidden>Reset the Game</button>
+      <button class="buttons" id="resetBtn" class="btn btn-outline-secondary" hidden>Reset the Game</button>
     </div>
     <div id="randoAcePicBtnDiv">
-      <button id="randoAcePicBtn" hidden>Random Ace Pictures!</button>
+      <button class="buttons" id="randoAcePicBtn" class="btn btn-outline-secondary" hidden>Random Ace Pictures!</button>
     </div>
   </main>
 </body>

@@ -4,7 +4,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-family: 'Shadows Into Light', cursive;
   margin: 0;
-  background-color: #226F54;
+  background-color: #43291F;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@ body {
 
 main {
   width: 700px;
-  background-color: #226F54;
+  background-color: #43291F;
   text-align: center;
   margin: 30px;
 }
@@ -36,8 +36,16 @@ section > p {
   align-items: center;
 }
 
+#title {
+  font-size: 35px;
+}
+
 #title,
 section > p {
   color: #F4F0BB;
   letter-spacing: 3px;
+}
+
+.buttons {
+  font-size: 18px;
 }
