@@ -72,6 +72,8 @@ init ()
 function init() {
   title.textContent = 'The Adventures of Ace!'
   title.style = 'display: default'
+  title.classList.add('animate__animated', 'animate__fadeIn')
+  title.style.setProperty('animate__fadeIn', '0.8s')
 
   sceneStories.textContent = storyMessages[4]
   
@@ -100,8 +102,6 @@ function sadAcePicture() {
   picturesOfAce.src = '../assets/sadAce.jpg'
   
   sceneStories.textContent = "Ace is sad you will not help him. All he wants to do is play ball with you."
-  sceneStories.classList.add('animate__animated', 'animate__fadeIn')
-  sceneStories.style.setProperty('animate__fadeIn', '0.8s')
 
   resetBtn.style = 'display: block'
   resetBtn.textContent = "I'm sorry Ace, let me help you find your ball."
@@ -123,8 +123,6 @@ function sadAcePicture() {
 
 function scene1() {
   sceneStories.textContent = storyMessages[0]
-  sceneStories.classList.add('animate__animated', 'animate__fadeIn')
-  sceneStories.style.setProperty('animate__fadeIn', '0.8s')
 
   picturesOfAce.style = "display: none"
   videosOfAce.src = '../assets/couchAce.mp4'
@@ -146,8 +144,6 @@ function scene1() {
 
 function scene2() {
   sceneStories.textContent = storyMessages[1]
-  sceneStories.classList.add('animate__animated', 'animate__fadeIn')
-  sceneStories.style.setProperty('animate__fadeIn', '0.8s')
 
   videosOfAce.src = "../assets/doorAce.mp4"
   videosOfAce.volume = .10
@@ -166,8 +162,6 @@ function scene2() {
 
 function scene3() {
   sceneStories.textContent = storyMessages[2]
-  sceneStories.classList.add('animate__animated', 'animate__fadeIn')
-  sceneStories.style.setProperty('animate__fadeIn', '0.5s')
   
   videosOfAce.src = "../assets/AceandSophieBackyard.mp4"
   videosOfAce.volume = .10
@@ -192,8 +186,6 @@ function winningScene() {
   picturesOfAce.src = '../assets/ballAce.jpg'
 
   sceneStories.textContent = storyMessages[3]
-  sceneStories.classList.add('animate__animated', 'animate__fadeIn')
-  sceneStories.style.setProperty('animate__fadeIn', '0.8s')
 
   helpAceBtn.style = 'display: none'
   sadAceBtn.style = 'display: none'
