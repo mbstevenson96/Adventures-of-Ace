@@ -56,6 +56,7 @@ const videosOfAce = document.getElementById('video')
 const resetBtn = document.getElementById('resetBtn')
 const resetBtnDiv = document.getElementById('resetBtnDiv')
 const randoAcePicBtn = document.getElementById('randoAcePicBtn')
+const partyWithAceBtn = document.getElementById('partyWithAceBtn')
 
 const aceSays = new Audio("../audio/winningSong.wav")
 
@@ -87,6 +88,7 @@ function init() {
   
   resetBtn.style = "display: none"
   randoAcePicBtn.style = 'display: none'
+  partyWithAceBtn.style = 'display: none'
 
   helpAceBtn.removeEventListener('click', winningScene)
 
@@ -111,7 +113,7 @@ function sadAcePicture() {
   sadAceBtn.style = 'display: none'
   title.style = 'display: none'
   randoAcePicBtn.style = 'display: none'
-
+  partyWithAceBtn.style = 'display: none'
   
   helpAceBtn.removeEventListener('click', scene1)
   helpAceBtn.removeEventListener('click', scene2)
@@ -135,6 +137,7 @@ function scene1() {
   title.style = 'display: none'
   resetBtn.style= "display: none"
   randoAcePicBtn.style= "display: none"
+  partyWithAceBtn.style = 'display: none'
 
   helpAceBtn.removeEventListener('click', scene1)
 
@@ -153,6 +156,7 @@ function scene2() {
   resetBtn.style= "display: none"
   randoAcePicBtn.style= "display: none"
   sadAceBtn.style = 'display: none'
+  partyWithAceBtn.style = 'display: none'
 
   helpAceBtn.removeEventListener('click', scene2)
 
@@ -172,6 +176,7 @@ function scene3() {
 
   sadAceBtn.style = "display: default"
   sadAceBtn.textContent = 'So sad, looks like your ball is lost.'
+  partyWithAceBtn.style = 'display: none'
 
   helpAceBtn.removeEventListener('click', scene3)
 
@@ -193,11 +198,13 @@ function winningScene() {
   resetBtn.style = 'display: block'
   resetBtn.textContent = 'Reset the Game'
   randoAcePicBtn.style = 'display: block'
+  partyWithAceBtn.style = 'display: block'
   
-  // picturesOfAce.addEventListener('mouseover', function() {
-  //   aceSays.volume = .10
-  //   winningAudio()
-  // })
+  partyWithAceBtn.addEventListener('click', function() {
+    aceSays.volume = .10
+    winningAudio()
+    confetti.start(2500)
+  })
 
   helpAceBtn.removeEventListener('click', winningScene)
 
