@@ -85,7 +85,6 @@ function init() {
   randoAcePicBtn.style = 'display: none'
 
   helpAceBtn.removeEventListener('click', winningScene)
-  // picturesOfAce.removeEventListener('mouseover', winningScene)
 
   helpAceBtn.addEventListener('click', scene1)
   picturesOfAce.addEventListener('mouseover', function() {
@@ -100,7 +99,7 @@ function sadAcePicture() {
   
   sceneStories.textContent = "Ace is sad you will not help him. All he wants to do is play ball with you."
   sceneStories.classList.add('animate__animated', 'animate__fadeIn')
-  sceneStories.style.setProperty('animate__fadeIn', '0.5s')
+  sceneStories.style.setProperty('animate__fadeIn', '0.8s')
 
   resetBtn.style = 'display: block'
   resetBtn.textContent = "I'm sorry Ace, let me help you find your ball."
@@ -109,6 +108,8 @@ function sadAcePicture() {
   helpAceBtn.style = 'display: none'
   sadAceBtn.style = 'display: none'
   title.style = 'display: none'
+  randoAcePicBtn.style = 'display: none'
+
   
   helpAceBtn.removeEventListener('click', scene1)
   helpAceBtn.removeEventListener('click', scene2)
@@ -132,6 +133,8 @@ function scene1() {
   sadAceBtn.textContent = 'Give Up.'
 
   title.style = 'display: none'
+  resetBtn.style= "display: none"
+  randoAcePicBtn.style= "display: none"
 
   helpAceBtn.removeEventListener('click', scene1)
 
@@ -148,6 +151,9 @@ function scene2() {
   videosOfAce.volume = .10
 
   helpAceBtn.textContent = 'Open Door!'
+
+  resetBtn.style= "display: none"
+  randoAcePicBtn.style= "display: none"
   sadAceBtn.style = 'display: none'
 
   helpAceBtn.removeEventListener('click', scene2)
@@ -165,6 +171,8 @@ function scene3() {
   videosOfAce.volume = .10
   
   helpAceBtn.textContent = 'Lets check the area around the rain barrel!'
+  resetBtn.style= "display: none"
+  randoAcePicBtn.style= "display: none"
 
   sadAceBtn.style = "display: default"
   sadAceBtn.textContent = 'So sad, looks like your ball is lost.'
@@ -183,18 +191,19 @@ function winningScene() {
 
   sceneStories.textContent = storyMessages[3]
   sceneStories.classList.add('animate__animated', 'animate__fadeIn')
-  sceneStories.style.setProperty('animate__fadeIn', '0.5s')
+  sceneStories.style.setProperty('animate__fadeIn', '0.8s')
 
   helpAceBtn.style = 'display: none'
   sadAceBtn.style = 'display: none'
+  
   resetBtn.style = 'display: block'
   resetBtn.textContent = 'Reset the Game'
   randoAcePicBtn.style = 'display: block'
   
-  picturesOfAce.addEventListener('mouseover', function() {
-    aceSays.volume = .10
-    winningAudio()
-  })
+  // picturesOfAce.addEventListener('mouseover', function() {
+  //   aceSays.volume = .10
+  //   winningAudio()
+  // })
 
   helpAceBtn.removeEventListener('click', winningScene)
 
@@ -205,7 +214,7 @@ function winningAudio() {
   aceSays.currentTime=0;
   aceSays.play();
   setInterval(function(){
-    if(aceSays.currentTime>5){
+    if(aceSays.currentTime > 5){
       aceSays.pause();
     }
   },1000);

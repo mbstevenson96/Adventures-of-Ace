@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,44 @@
   <title>Adventure of Ace</title>
   <script defer src="./js/app.js"></script>
   <link rel="stylesheet" href="./css/style.css">
-  <link 
-    id="favicon" 
-    rel="icon"
-    href="./assets/pawprintfav.gif"
-    type="image/png" 
-    sizes="32x32"
-  >
+  <link id="favicon" rel="icon" href="./assets/pawprintfav.gif" type="image/png" sizes="32x32">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Combo&family=Roboto&family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
   <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Combo&family=Roboto&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
+
 <body>
   <main>
     <h1 id="title">The Adventures of Ace!</h1>
     <img id="image-ace" src="./assets/windowAce.jpeg" alt="Photo of Ace">
-    <video controls id="video" src="./assets/couchAce.mp4" width="300px" type="video/mp4" hidden></video>
+    <video id="video" src="./assets/couchAce.mp4" width="300px" type="video/mp4" controls hidden></video>
     <section id="message">
-      <p id="story">Welcome to the Adventures of Ace! Ace is a Bulldog American Staffordshire Terrier mix who loves to play ball. An issue has arose, though, where he has lost his ball and is sad. He is looking for someone to assist him in searching and wants to know if that will be you? Work through this story game to find out what happened to Ace's ball and be his hero. Whatch out for sad Ace, though, because one wrong move can cause great disappointment!</p>
+      <p id="story">Welcome to the Adventures of Ace! Ace is a Bulldog American Staffordshire Terrier mix who loves to
+        play ball. An issue has arose, though, where he has lost his ball and is sad. He is looking for someone to
+        assist him in searching and wants to know if that will be you? Work through this story game to find out what
+        happened to Ace's ball and be his hero. Whatch out for sad Ace, though, because one wrong move can cause great
+        disappointment!</p>
     </section>
-    <div>
-      <button class="buttons notHiddenBtns" id="help-ace">Help Ace Find Ball</button>
+    <div id="button1Div">
+      <div class="buttonDivs" id="helpAceDiv">
+        <button class="buttons" id="help-ace">Help Ace Find Ball</button>
+      </div>
+      <div class="buttonDivs" id="randoAcePicBtnDiv">
+        <button class="buttons" id="randoAcePicBtn">Random Ace Pictures!</button>
+      </div>
     </div>
-    <div>
-      <button class="buttons notHiddenBtns" id="sad-ace">Too Bad So Sad Ace Boy</button>
-    </div>
-    <div id="resetBtnDiv">
-      <button class="buttons" id="resetBtn" hidden>Reset the Game</button>
-    </div>
-    <div id="randoAcePicBtnDiv">
-      <button class="buttons" id="randoAcePicBtn" hidden>Random Ace Pictures!</button>
+    <div id="button2Div">
+      <div class="buttonDivs" id="sadAceDiv">
+        <button class="buttons" id="sad-ace">Too Bad So Sad Ace Boy</button>
+      </div>
+      <div class="buttonDivs" id="resetBtnDiv">
+        <button class="buttons" id="resetBtn">Reset the Game</button>
+      </div>
     </div>
   </main>
 </body>
+
 </html>

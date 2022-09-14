@@ -4,30 +4,32 @@ body {
   font-family: 'Roboto', sans-serif;
   font-family: 'Shadows Into Light', cursive;
   margin: 0;
-  background-color: #226F54;
-  min-height: 100vh;
+  background-image: linear-gradient(#226F54, #87C38F);
+  background-size: cover;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 main {
-  width: 700px;
-  background-color: #226F54;
+  background-size: cover;
+  background-image: linear-gradient(#226F54, #87C38F);
   text-align: center;
   margin: 30px;
+  padding-bottom: 80px;
 }
 
 img {
-  height: 400px;
-  width: 80%;
-  border-radius: 20%;
+  display: flex;
+  flex-grow: 4;
+  height: 50vh;
+  border-radius: 50px;
   border: 5px solid #F4F0BB;
 }
 
 video {
-  height: 500px;
-  width: 95%;
+  height: 50vh;
 }
 
 section > p {
@@ -61,7 +63,7 @@ section > p {
 
 .buttons:hover {
   box-shadow: 2px 5px 9px #DA2C38;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 #resetBtnDiv,
@@ -76,40 +78,63 @@ div {
 }
 
 @media only screen and (min-width: 768px) {
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  main {
+    display: grid;
+    text-align: left;
+    grid-template-columns: 2;
+    grid-template-rows: auto auto auto auto ;
+    grid-template-areas: 
+      "title p"
+      "img p"
+      "img button1"
+      "img button2";
   }
 
   #title {
     font-size: 55px;
+    grid-column-start: 1;
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
 
-  section > p {
+  section {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    grid-area: p;
     font-size: 24px;
+    grid-column-start: 2;
+    margin: 0;
+    padding: 50px;
+  }
+
+  #button1Div {
+    display: flex;
+    flex-direction: row;
+    grid-area: button1;
+    font-size: 20px;
+    max-height: 40px;
+    margin-top: 0;
+  }
+  #button2Div {
+    display: flex;
+    flex-direction: row;
+    grid-area: button2;
+    font-size: 20px;
+    max-height: 40px;
+    margin-top: 0;
   }
 
   img {
-    width: 80vh;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-area: img;
+    height: 70vh;
+    max-width: 90vh;
+    margin: auto;
   }
 
-  .buttons {
-    font-size: 20px;
-  }
-
-#notHiddenBtns {
-  padding: 0;
-}
-
-  .resetBtnDiv {
-    padding-bottom: 2px;
-  }
-  .randoAcePicBtnDiv {
-    padding-top: 2px;
+  #video {
+    grid-row-start: 2;
+    grid-area: img;
   }
 }
