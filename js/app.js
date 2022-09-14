@@ -194,10 +194,10 @@ function winningScene() {
   resetBtn.textContent = 'Reset the Game'
   randoAcePicBtn.style = 'display: block'
   
-  // picturesOfAce.addEventListener('mouseover', function() {
-  //   aceSays.volume = .10
-  //   winningAudio()
-  // })
+  picturesOfAce.addEventListener('mouseover', function() {
+    aceSays.volume = .10
+    winningAudio()
+  })
 
   helpAceBtn.removeEventListener('click', winningScene)
 
