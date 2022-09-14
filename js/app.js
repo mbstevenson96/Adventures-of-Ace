@@ -71,6 +71,8 @@ init ()
 
 function init() {
   title.textContent = 'The Adventures of Ace!'
+  title.style = 'display: default'
+
   sceneStories.textContent = storyMessages[4]
   
   picturesOfAce.src = "../assets/windowAce.jpeg"
@@ -195,7 +197,7 @@ function winningScene() {
 
   helpAceBtn.style = 'display: none'
   sadAceBtn.style = 'display: none'
-  
+
   resetBtn.style = 'display: block'
   resetBtn.textContent = 'Reset the Game'
   randoAcePicBtn.style = 'display: block'
