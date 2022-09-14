@@ -1,6 +1,6 @@
-``` BASH
-The Adventures of Ace!
+# The Adventures of Ace!
 
+![Adventures of Ace Cover Photo](./assets/coverPhoto.png)
 
 About:
 Welcome to the Adventures of Ace! Ace is a Bulldog American 
@@ -11,22 +11,22 @@ find out what happened to Ace's ball and be his hero. Whatch out for sad Ace, th
 because one wrong move can cause great disappointment!
 
 
-[Link to Play Game](https://adventures-of-ace.netlify.app/)
+Link to [Play Game](https://adventures-of-ace.netlify.app/)
 
 
 Technologies Used:
-- JavaScript
-- HTML5
-- CSS
+* JavaScript
+* HTML5
+* CSS
 
 Assets:
-- Paw Print favicon used from Isabella Baillie on Giphy - 
+* Paw Print favicon used from Isabella Baillie on Giphy - 
     https://giphy.com/stickers/paw-pawprint-print-fXWP44L91ioNZQSh2G
-- Add "Fad In" animation to text from Animate.css
+* Add "Fad In" animation to text from Animate.css
+* Traversy Media: "Markdown Crash Course" for creating     
+    README - https://www.youtube.com/watch?v=HUBNt18RFbo
 
 
 
-Next Steps:
+Future Features:
 "Play Ball" extension to allow the player to play ball with Ace once the ball is found. 
-
-```
