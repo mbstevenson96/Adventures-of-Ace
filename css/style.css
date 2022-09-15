@@ -21,13 +21,13 @@ main {
 }
 
 img {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 4;
   height: 50vh;
   border-radius: 50px;
   border: 5px solid #F4F0BB;
+  max-width: 80vh;
 }
 
 video {
@@ -61,6 +61,7 @@ section > p {
   background-color: white;
   border-radius: 45px;
   box-shadow: 2px 5px 9px #F4F0BB;
+  width: 200px;
 }
 
 .buttons:hover {
@@ -68,12 +69,19 @@ section > p {
   transform: translateY(-3px);
 }
 
-#resetBtnDiv,
-#randoAcePicBtnDiv {
+#button1Div,
+#button2Div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* #resetBtnDiv,
+#randoAcePicBtnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 div {
   padding: 10px;
