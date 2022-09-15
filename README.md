@@ -12,6 +12,7 @@ because one wrong move can cause great disappointment!
 
 
 ## Link to [Play Game](https://adventures-of-ace.netlify.app/)
+### Link to [Whimsical Planning](https://whimsical.com/adventures-of-ace-jAbpv3XV6WjVaaUkJjwfP)
 
 
 ## Technologies Used:
