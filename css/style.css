@@ -34,12 +34,10 @@ video {
   height: 50vh;
 }
 
-section {
+section > p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  text-align: center;
 }
 
 #title {
@@ -111,12 +109,12 @@ div {
     font-size: 24px;
     grid-column-start: 2;
     margin: 0;
-    padding: 50px;
+    padding: 30px;
   }
 
   section > p {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   #button1-div {
@@ -144,7 +142,7 @@ div {
     grid-area: img;
     height: 70vh;
     max-width: 90vh;
-    margin: auto;
+    margin: 0;
   }
 
   #video {
