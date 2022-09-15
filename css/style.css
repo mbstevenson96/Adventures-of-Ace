@@ -34,10 +34,12 @@ video {
   height: 50vh;
 }
 
-section > p {
+section {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 200px;
+  text-align: center;
 }
 
 #title {
@@ -61,7 +63,7 @@ section > p {
   background-color: white;
   border-radius: 45px;
   box-shadow: 2px 5px 9px #F4F0BB;
-  width: 200px;
+  max-width: 200px;
 }
 
 .buttons:hover {
@@ -75,13 +77,6 @@ section > p {
   justify-content: center;
   align-items: center;
 }
-
-/* #resetBtnDiv,
-#randoAcePicBtnDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 div {
   padding: 10px;
