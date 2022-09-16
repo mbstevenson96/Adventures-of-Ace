@@ -23,12 +23,12 @@ because one wrong move can cause great disappointment!
 ## Assets:
 * Paw Print favicon used from Isabella Baillie on Giphy - 
     https://giphy.com/stickers/paw-pawprint-print-fXWP44L91ioNZQSh2G
-* Add "Fad In" animation to text from Animate.css
+* Add "Fade In" animation to text from Animate.css
 * Traversy Media: "Markdown Crash Course" for creating     
     README - https://www.youtube.com/watch?v=HUBNt18RFbo
 * Confetti library used for party with Ace.
 * Sound used from Xcreenplay on freesound.org - https://freesound.org/people/Xcreenplay/sounds/577905/
-
+* All pictures and videos were taken by the creator of the game.
 
 
 ## Future Features:
